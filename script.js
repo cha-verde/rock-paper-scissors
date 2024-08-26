@@ -9,7 +9,7 @@ function getComputerChoice() {
         case 2:
             return "paper";
         case 3:
-            return "scissorss"
+            return "scissors"
     }
 }
 
