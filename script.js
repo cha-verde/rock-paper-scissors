@@ -21,56 +21,62 @@ function getHumanChoice() {
 function playRound(humanChoice, computerChoice) {
     
     if (humanChoice == computerChoice) {
-        console.log("Draw!");
-        console.log("Your score: " + humanScore);
-        console.log("Computer score: " + computerScore);
+        showResultOfOneRound("draw")
         return;
     }
     else if (humanChoice == "rock") {
         if (computerChoice == "paper") {
-            console.log("You lose!");
             computerScore++;
-            console.log("Your score: " +humanScore);
-            console.log("Computer score: " +computerScore);            
+            showResultOfOneRound("lose");          
         }
         else if (computerChoice == "scissors") {
-            console.log("You win!");
             humanScore++;
-            console.log("Your score: " +humanScore);
-            console.log("Computer score: " +computerScore);
+            showResultOfOneRound("win");
         }
 
     }
     else if (humanChoice == "paper") {
         if (computerChoice == "rock") {
-            console.log("You win!");
             humanScore++;
-            console.log("Your score: " +humanScore);
-            console.log("Computer score: " +computerScore);
+            showResultOfOneRound("win");
+
         }
         else if (computerChoice == "scissors") {
-            console.log("You lose!");
             computerScore++;
-            console.log("Your score: " +humanScore);
-            console.log("Computer score: " +computerScore);
+            showResultOfOneRound("lose");          
         }
 
     }
     else if (humanChoice == "scissors") {
         if (computerChoice == "rock") {
-            console.log("You lose!");
             computerScore++;
-            console.log("Your score: " +humanScore);
-            console.log("Computer score: " +computerScore);
+            showResultOfOneRound("lose");          
         }
         else if (computerChoice == "paper") {
-            console.log("You win!");
             humanScore++;
-            console.log("Your score: " +humanScore);
-            console.log("Computer score: " +computerScore);
+            showResultOfOneRound("win");
         }
 
     }
+
+}
+
+function showResultOfOneRound(result){
+        let message = "";
+        switch (result) {
+            case "draw":
+                message = "Draw!";
+                break;
+            case "win":
+                message = "You win!";
+                break;
+            case "lose":
+                message = "You lose!"
+                break;
+        }
+        console.log(message);
+        console.log("Your score: " + humanScore);
+        console.log("Computer score: " + computerScore);
 
 }
 
