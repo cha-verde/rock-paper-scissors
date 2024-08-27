@@ -1,0 +1,56 @@
+@font-face {
+    font-family: shakeitoff;
+    src: url(KGShakeitOff.ttf);
+  }
+
+body{
+    font-family: shakeitoff;
+    margin: 0;
+    height: 100vh;
+    background-color: rgb(255, 210, 218);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fake-border{
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    border-radius: 20px;
+}
+
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  }
+
+.container{
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+
+}
+
+.buttons{
+    display: flex;
+    gap: 20px;
+}
+
+#rock, #paper, #scissors{
+    padding: 10px;
+    border: 0px;
+    transition-duration: 0.4s;
+    border-radius: 25px;
+
+}
+
+.rockImage, .paperImage, .scissorsImage{
+    width: 150px;
+}
+
+.resetButton{
+    display: none;
+}

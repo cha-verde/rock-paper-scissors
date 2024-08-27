@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    </style>
 </head>
+
 <body>
+    <div class="fake-border">
+        <div class="container">
+            <h1>Rock, Paper, Scissors!</h1>
+            <div class="buttons">
+                <button id="rock" class="choiceButton"><img class="rockImage" src="rocks.svg"></button>
+                <button id="paper" class="choiceButton"><img class="paperImage" src="paper.svg"></button>
+                <button id="scissors" class="choiceButton"><img class="scissorsImage" src="scissors.svg"></button>
+            </div>
+            <div class="humanScoreContainer">
+                <p>Your score:</p>
+                <p id="humanScore"></p>
+            </div>
+            <div class="computerScoreContainer">
+                <p>Computer score:</p>
+                <p id="computerScore"></p>
+            </div>
+            <p id="result"></p>
+            <p id="winner"></p>
+            <button class="resetButton">Reset</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
