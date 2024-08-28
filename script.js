@@ -191,5 +191,8 @@ resetButton.addEventListener("click", () => {
     humanScoreElement.textContent = humanScore;
     computerScoreElement.textContent = computerScore;
     winnerElement.textContent = '';
+    resultElement.textContent = '';
     resetButton.style.display = 'none';
 })
+
+document.title = "Rock, Paper, Scissors";
